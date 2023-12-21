@@ -104,22 +104,25 @@ namespace homework
             while (true);
 
             //5.Verilmiş 5 uzunluqlu ədədlər siyahısındaki ədədlərin cəmini tapan proqram
-            //(koddaki sehvi duzelde bilmedim)
-
-
+            
             int[] nums = new int[5];
             int Sum = 0;
 
             Console.WriteLine("5 eded daxil edin:");
 
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < nums.Length; i++)
             {
                 Console.Write($"Eded {i + 1}: ");
                 string input = Console.ReadLine();
+                int inp = Convert.ToInt32(input);
 
+                nums[i] = inp;
             }
-            for (int num = 0; num < 6; num++)
-                Sum += num;
+            for (int i = 0; i< nums.Length; i++)
+            {
+                Sum=Sum+nums[i];
+            }
+                
 
             Console.WriteLine($"Daxil etdiyiniz ededlerin cemi: {Sum}");
 
